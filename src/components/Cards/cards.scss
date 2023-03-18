@@ -1,0 +1,115 @@
+@use "../../scss/tools";
+@use "../../scss/setting";
+
+.Cards {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &,
+    &-front,
+    &-back {
+        position: relative;
+    }
+
+    &-front {
+        left: 130px;
+    }
+
+    &-back {
+        left: 230px;
+    }
+
+    &-inner {
+        @include tools.flex($align: center, $justify: center, $direction: column, $gap: setting.$space-md);
+        color: setting.$neutral-white;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+
+        &--front {
+            padding: setting.$space-md;
+            gap: 0;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &--back {
+            padding: setting.$space-md;
+            gap: 0;
+        }
+    }
+
+    &-picture {
+        display: block;
+        user-select: none;
+    }
+
+    &-paydata {
+        @include tools.flex($direction: column, $gap: setting.$space-sm);
+        width: 100%;
+
+        &--back {
+            position: relative;
+            top: -3px;
+            left: -15px;
+            align-items: flex-end;
+        }
+    }
+
+    &-bg,
+    &-number,
+    &-name {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-number {
+        font-size: setting.$font-size-md;
+    }
+
+    &-name {
+        @include tools.flex($justify: space-between);
+        font-size: setting.$font-size-sm;
+        color: setting.$neutral-light-grayish-violet;
+    }
+
+    @media only screen and (max-width: 1160px) {
+        &-front,
+        &-back {
+            left: 0;
+        }
+    }
+
+    @media only screen and (max-width: 880px) {
+        &-front {
+            top: 175px;
+        }
+
+        &-back {
+            top: -100px;
+            left: 30px;
+            z-index: -1;
+        }
+
+        &-bg {
+            width: 100vw;
+            min-height: 240px;
+            max-height: 240px;
+        }
+
+        &-image {
+            width: 100%;
+            max-width: 280px;
+        }
+
+        &-number {
+            font-size: 16px;
+        }
+
+        &-name {
+            font-size: 10px;
+        }
+    }
+}

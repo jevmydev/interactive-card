@@ -1,0 +1,76 @@
+@use "../../scss/tools";
+@use "../../scss/setting";
+
+.Payment {
+    @include tools.flex($justify: center);
+    margin-left: 200px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &-row {
+        @include tools.flex($gap: setting.$space-sm, $align: flex-end);
+    }
+
+    &-form {
+        @include tools.flex($justify: flex-end, $direction: column, $gap: setting.$space-sm);
+        max-width: 350px;
+        height: 100%;
+    }
+
+    &-label {
+        @include tools.flex($direction: column, $gap: 5px);
+        width: 100%;
+        font-size: setting.$font-size-sm;
+    }
+
+    &-input,
+    &-submit,
+    &-button {
+        outline: 0;
+        width: 100%;
+        font-family: inherit;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+        padding: setting.$space-xsm;
+        font-size: setting.$font-size;
+        border: 1px solid setting.$neutral-light-grayish-violet;
+        border-radius: setting.$radius;
+
+        &:focus {
+            border-color: setting.$neutral-dark-grayish-violet;
+        }
+
+        &::placeholder {
+            color: setting.$neutral-dark-grayish-violet;
+        }
+    }
+
+    &-submit,
+    &-button {
+        cursor: pointer;
+        border: 0;
+        background-color: setting.$neutral-very-dark-violet;
+        color: setting.$neutral-white;
+
+        &:hover {
+            background-color: setting.$neutral-light-grayish-violet;
+            color: setting.$neutral-very-dark-violet;
+        }
+    }
+
+    &-success {
+        @include tools.flex($justify: flex-end, $align: center, $direction: column, $gap: setting.$space-sm);
+        height: 100%;
+    }
+
+    &-message {
+        text-transform: none;
+        letter-spacing: 0;
+        color: setting.$neutral-dark-grayish-violet;
+    }
+
+    @media only screen and (max-width: 1160px) {
+        & {
+            margin: 0;
+        }
+    }
+}

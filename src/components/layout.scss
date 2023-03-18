@@ -1,0 +1,25 @@
+@use "../scss/tools";
+@use "../scss/setting";
+
+.Layout {
+    &-inner {
+        @include tools.center();
+        @include tools.flex($align: center);
+        position: relative;
+        overflow: hidden;
+        max-height: 100vh;
+    }
+
+    &-payment {
+        flex: 1;
+    }
+
+    @media only screen and (max-width: 880px) {
+        &-inner {
+            height: 100vh;
+            padding: setting.$space-md;
+            padding-top: 0;
+            flex-direction: column;
+        }
+    }
+}
