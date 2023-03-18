@@ -18,8 +18,6 @@ specifiers:
   zustand: 4.3.6
 
 dependencies:
-  eslint-config-prettier: 8.7.0_eslint@8.36.0
-  prettier: 2.8.4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   sass: 1.59.3
@@ -33,6 +31,8 @@ devDependencies:
   '@vitejs/plugin-react-swc': 3.0.0_vite@4.2.0
   eslint: 8.36.0
   eslint-plugin-react: 7.32.2_eslint@8.36.0
+  eslint-config-prettier: 8.7.0_eslint@8.36.0
+  prettier: 2.8.4
   typescript: 4.9.3
   vite: 4.2.0_sass@1.59.3
 
