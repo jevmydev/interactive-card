@@ -44,6 +44,7 @@
     &-picture {
         display: block;
         user-select: none;
+        min-width: 280px;
     }
 
     &-paydata {
@@ -94,7 +95,7 @@
         }
 
         &-bg {
-            width: 100vw;
+            min-width: 100vw;
             min-height: 240px;
             max-height: 240px;
         }

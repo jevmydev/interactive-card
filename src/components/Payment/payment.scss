@@ -11,10 +11,12 @@
         @include tools.flex($gap: setting.$space-sm, $align: flex-end);
     }
 
-    &-form {
-        @include tools.flex($justify: flex-end, $direction: column, $gap: setting.$space-sm);
+    &-form,
+    &-success {
+        @include tools.flex($direction: column, $gap: setting.$space-sm);
         max-width: 350px;
         height: 100%;
+        margin-top: setting.$space-md + 20px;
     }
 
     &-label {
