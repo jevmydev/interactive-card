@@ -7,7 +7,6 @@
         @include tools.flex($align: center);
         position: relative;
         overflow: hidden;
-        max-height: 100vh;
     }
 
     &-payment {
