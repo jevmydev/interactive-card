@@ -23,6 +23,8 @@
         @include tools.flex($direction: column, $gap: 5px);
         width: 100%;
         font-size: setting.$font-size-sm;
+        position: relative;
+        margin: 5px 0;
     }
 
     &-input,
@@ -64,10 +66,17 @@
         height: 100%;
     }
 
-    &-message {
+    &-message,
+    &-error {
         text-transform: none;
         letter-spacing: 0;
         color: setting.$neutral-dark-grayish-violet;
+    }
+
+    &-error {
+        color: setting.$red-status;
+        position: absolute;
+        bottom: -20px;
     }
 
     @media only screen and (max-width: 1160px) {
